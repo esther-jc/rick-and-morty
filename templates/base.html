@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="description" content="Rick and Morty catalog">
+    <meta name=author content="Esther">
+    <title>{{ title }}</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+    <link rel='stylesheet' href="{{ url_for('static', filename = 'style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">
+            <a href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename = 'images/logo.png') }}" alt="Rickords logo" width="100px">
+                <img src="{{ url_for('static', filename = 'images/rickAndMortyVault.gif') }}" alt="Rickords logo" width="80px">
+            </a>
+
+        </div>
+
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+                <div class="wrap">
+                <div class="search">
+                    <input class="searchTerm" type="text" placeholder='Try looking up "Rick"!'>
+                    <button class="searchButton" type="submit"><i class="fa fa-search"></i></button>
+                </div>
+                </div>
+
+                <li><a href="{{ url_for('viewRecords') }}">📝 Records</a></li>
+                <li><a href="{{ url_for('viewFavs') }}">⭐ Favorites</a></li>
+                <li><a href="{{ url_for('viewMap') }}">🗺 Map</a></li>
+                <li><a href="{{ url_for('login') }}">👤 User</a></li>
+            </div>
+
+        </ul>
+    </nav>
+
+    <div class="bg"></div>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

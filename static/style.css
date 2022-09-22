@@ -1,0 +1,176 @@
+/* CONSISTENT VARIABLES */
+HTML {
+    --color-lightgreen: #baf069;
+    --color-lightergreen: #d1f2a0;
+    --color-green: #7fd645;
+    --color-teal: #4daeae;
+}
+
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   body {
+    font-family: Abel;
+    background-color: black;
+    color: white;
+   }
+   .bg {
+    /* The image used */
+    background-image: url("images/space.png");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+   /* a removes line below links */
+   a { 
+    text-decoration: none;
+   }
+   /* removes bullets from list items */
+   li {
+    list-style: none;
+   }
+   
+/* NAVBAR */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: white;
+    color: #fff;
+    height: 61px;
+   }
+   .nav-links a {
+    color: black;
+   }
+   /* LOGO */
+   .logo {
+    font-size: 30px;
+    margin-left: 15px;
+   }
+   .logo:hover {
+    background-color: var(--color-lightgreen);
+    border-radius: 10px;
+    transition: 0.3s ease;
+    padding: 10px;
+   }
+   /* NAVBAR MENU */
+   .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+   }
+   /* padding between each menu item */
+   .menu li {
+    /* top and bottom, left and right */
+    padding: 15px 14px;
+   }
+   .menu li:hover {
+    background-color: var(--color-lightgreen);
+    /* border-radius: 10px; */
+    transition: 0.3s ease;
+    transform: scale(1.1);
+   }
+
+/* SEARCH BAR IN NAVBAR */
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+    padding: 10px;
+}
+
+    .searchTerm {
+        width: 600px;
+        border: 3px solid var(--color-lightgreen);
+        border-right: none;
+        padding: 5px;
+        height: 36px;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+        /* color: #9DBFAF; */
+        background-color: var(--color-lightergreen);
+        font-family: Abel;
+        font-size: 18px;
+    }
+
+    /* .searchTerm:focus{
+        color: var(--color-teal);
+    } */
+
+    .searchButton {
+        width: 40px;
+        height: 36px;
+        border: 1px solid var(--color-lightgreen);
+        background: var(--color-green);
+        text-align: center;
+        color: #fff;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    /*Resize the wrap to see the search bar change!*/
+    /* .wrap{
+        width: 30%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } */
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+    display: none;
+}
+/*HAMBURGER MENU*/
+.hamburger {
+    display: none;
+    font-size: 30px;
+    user-select: none;
+    color: var(--color-teal);
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+.menu { 
+    display:none;
+    position: absolute;
+    background-color:white;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 12px 0;
+}
+.menu li:hover {
+    display: inline-block;
+    background-color: var(--color-lightgreen);
+    transition: 0.3s ease;
+    border-radius: 10px;
+
+}
+.menu li + li {
+    margin-top: 12px;
+}
+input[type=checkbox]:checked ~ .menu{
+    display: block;
+}
+.hamburger {
+    display: block;
+}
+.searchTerm {
+    width: 200px;
+}
+.search {
+    margin: auto;
+    width: 50%;
+}
+}
