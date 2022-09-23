@@ -6,7 +6,7 @@
     <meta name="description" content="Rick and Morty catalog">
     <meta name=author content="Esther">
     <title>{{ title }}</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+    <link rel="icon" type="image/png" href="/static/images/rick.png">
     <link rel='stylesheet' href="{{ url_for('static', filename = 'style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
@@ -40,19 +40,18 @@
                 </div>
                 </div>
 
-                <li><a href="{{ url_for('viewRecords') }}">📝 Records</a></li>
-                <li><a href="{{ url_for('viewFavs') }}">⭐ Favorites</a></li>
-                <li><a href="{{ url_for('viewMap') }}">🗺 Map</a></li>
-                <li><a href="{{ url_for('login') }}">👤 User</a></li>
+                <li><a href="{{ url_for('viewRecords') }}">✎ Records</a></li>
+                <li><a href="{{ url_for('viewFavs') }}">☆ Favorites</a></li>
+                <li><a href="{{ url_for('viewMap') }}">➢ Map</a></li>
+                <li><a href="{{ url_for('login') }}">☺ Login</a></li>
             </div>
 
         </ul>
     </nav>
 
-    <div class="bg"></div>
-
     {% block content %}
     {% endblock %}
 
+    
 </body>
 </html>

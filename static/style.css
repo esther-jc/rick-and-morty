@@ -17,21 +17,16 @@ HTML {
     background-color: black;
     color: white;
    }
-   .bg {
-    /* The image used */
-    background-image: url("images/space.png");
-  
-    /* Full height */
-    height: 100%; 
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-   }
    /* a removes line below links */
    a { 
     text-decoration: none;
+   }
+   a:visited {
+    color: inherit;
+   }
+   a:hover {
+    background-color: var(--color-lightergreen);
+    color: black;
    }
    /* removes bullets from list items */
    li {
@@ -57,7 +52,7 @@ HTML {
     margin-left: 15px;
    }
    .logo:hover {
-    background-color: var(--color-lightgreen);
+    background-color: var(--color-lightergreen);
     border-radius: 10px;
     transition: 0.3s ease;
     padding: 10px;
@@ -74,7 +69,7 @@ HTML {
     padding: 15px 14px;
    }
    .menu li:hover {
-    background-color: var(--color-lightgreen);
+    background-color: var(--color-lightergreen);
     /* border-radius: 10px; */
     transition: 0.3s ease;
     transform: scale(1.1);
@@ -174,3 +169,26 @@ input[type=checkbox]:checked ~ .menu{
     width: 50%;
 }
 }
+
+/* HOME PAGE */
+.home-right {
+    margin-left: 50%;
+    margin-top: 150px;
+    margin-right: 80px;
+    border: 2px solid var(--color-lightgreen);
+    border-radius: 10px;
+}
+    .home-right-top {
+        padding: 10px;
+        text-align: center;
+        font-size: 40px;
+        border-bottom: 2px solid var(--color-lightgreen);
+        color: var(--color-lightergreen);
+    }
+
+    .home-right-bottom {
+        padding: 10px;
+        font-size: 20px;
+        padding: 30px;
+        color: var(--color-lightergreen);
+    }

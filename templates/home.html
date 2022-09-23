@@ -3,6 +3,28 @@
 
 {% block content %}
 
-    <p>Rick's records of different characters from <i>Rick and Morty</i> 🛸👽</p>
-    <!-- <img src="{{ url_for('static', filename='images/rickAndMortyVault.gif') }}" alt="Rick and Morty home page image" width="60%"> -->
+    <!-- <img src="{{ url_for('static', filename='images/notFound.png') }}" alt="Rick and Morty home page image" width="100%" height="100%"> -->
+
+    <div style="width: 100%; overflow: hidden;">
+        
+        <div style="width: 50%; float: left; padding: 100px; padding-left: 200px;">
+            <img src="{{ url_for('static', filename='images/rickPortal.png') }}" alt="Rick and Morty home page image" width="350px">
+        </div>
+
+        <div class="home-right">
+            <div class="home-right-top">
+                <p>OVERVIEW</p>
+            </div>
+            <div class="home-right-bottom">
+                <p>▢ Database of characters from the animated TV show <i>Rick and Morty</i>.</p>
+                <br>
+                <p>▢ Built by Esther using Python, SQL, Flask, Django, HTML, and CSS.</p>
+                <br>
+                <p>▢ Character information retrieved from the <a href="https://rickandmortyapi.com/documentation">Rick and Morty API
+                    </a>.</p>
+            </div>
+            
+        </div>
+   </div>
+
 {% endblock %}
